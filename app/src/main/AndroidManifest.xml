@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.picpay.gradlelint.versioncheck.sample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:label="@android:string/dialog_alert_title"
+        android:supportsRtl="true"
+        android:theme="@android:style/ThemeOverlay" />
+
+</manifest>

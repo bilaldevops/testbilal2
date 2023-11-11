@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.picpay.gradlelint.versioncheck.sample"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        enable "VersionCheckerGradleLint"
+    }
+
+}
+
+dependencies {
+    implementation Libs.appCompat
+    implementation Libs.retrofit
+    implementation Libs.playServiceLocation
+    implementation Libs.koinCore
+    implementation Libs.mpchart
+    testImplementation TestLibs.junit
+}
